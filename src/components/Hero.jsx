@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from  '../styles/Hero.module.css'
+import Link from 'next/link'
 
 const Hero = () => {
   return (
@@ -8,7 +9,8 @@ const Hero = () => {
         
         <div className={styles.buttons}>
         <div className={styles.btn}>Chat now on whatsaap</div>
-        <div className={styles.btn}>Explore Our Services</div>
+
+        <Link href={'/service'} className={styles.btn}>Explore Our Services</Link>
         </div>
         
          </div>

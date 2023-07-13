@@ -1,0 +1,91 @@
+.container {
+  
+    padding: 20px;
+    background-color:#383838 ;
+    font-family: sans-serif;
+  }
+  
+  .footer {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .info {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .infocontent {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .infocontent > div:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  
+  .infocontent div:first-child {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .infocontent div:nth-child(2) {
+    margin-bottom: 20px;
+  }
+  
+  .infocontent div:last-child {
+    color: #888888;
+  }
+
+  .services{
+    flex: 1;
+  }
+
+
+  
+  .Industries{
+    flex: 1;
+  }
+
+  .Resources{
+    flex: 1;
+  }
+
+  .heading{
+    color: aliceblue;
+    
+    font-size: 30px;
+    font-weight: bold;
+    flex: 1;
+  }
+
+  .content{
+    color: #101010;
+    font-size: 15px;
+    font-weight: bold;
+    flex: 1;
+  }
+
+  @media (max-width: 768px) {
+    .footer {
+      flex-direction: column;
+    }
+  
+    .info {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .infocontent {
+      text-align: center;
+    }
+
+    .heading{
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    .content{
+        font-size: 10px;
+    }
+}

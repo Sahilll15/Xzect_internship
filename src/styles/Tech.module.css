@@ -83,5 +83,33 @@
         border: 2px solid black;
     }
 
-
+    @media (max-width: 768px) {
+      .subheading {
+          margin: 20px;
+      }
   
+      .technology {
+          width: calc(20% - 20px);
+      }
+      .name{
+        font-size: 10px;
+      }
+      .btn{
+        margin: 0px 100px;
+      }
+  }
+  
+  @media (max-width: 576px) {
+      .container {
+          height: auto;
+      }
+  
+      .subheading {
+          font-size: 18px;
+          margin: 10px;
+      }
+  
+      .technology {
+          width: calc(100% - 20px);
+      }
+  }
