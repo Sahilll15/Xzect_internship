@@ -1,0 +1,87 @@
+.container{
+  
+    font-family: sans-serif;
+    background-color: aliceblue;
+    padding: 10px;
+    height: 100vh;
+}
+
+.heading{
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    margin:  20px 0;
+    color: black;
+}
+
+.subheading{
+    text-align: center;
+    font-size: 20px;
+    color: grey;
+    margin: 20px 200px;
+}
+
+.technologies {
+    margin: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    border-radius: 10px;
+  }
+  
+  .technology {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: calc(20% - 20px); /* Adjust the width based on the container width and desired spacing */
+  }
+
+ 
+  
+.image img {
+    width: 50px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 50%;
+
+  }
+  
+  .name {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+  }
+
+
+  .btn{
+   
+    margin-right: 20px;
+    background-color: #000a1a;
+    color: aliceblue;
+    border: 2px solid aliceblue;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    margin: 0px 400px;
+    
+
+  }
+ .btn:hover{
+        background-color: aliceblue;
+        color: #000a1a;
+        transition: 0.5s;
+        border: 2px solid black;
+    }
+
+
+  
