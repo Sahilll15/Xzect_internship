@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from '../styles/Solution.module.css';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const Card = ({ title, link, image }) => {
     return (
@@ -7,7 +9,9 @@ const Card = ({ title, link, image }) => {
         <img className={styles.image} src={image} alt={title} />
         <div className={styles.content}>
           <h2 className={styles.title}>{title}</h2>
-          <p className={styles.link}>{link}</p>
+          <Link href={`/service/${title}`} className={styles.link}>
+            Get Started
+            </Link>
         </div>
       </div>
     );
@@ -15,6 +19,7 @@ const Card = ({ title, link, image }) => {
   
 
 const ServicesCard = () => {
+  const router = useRouter();
  
     const services = [
         {
@@ -54,7 +59,7 @@ const ServicesCard = () => {
           image: "https://www.xzect.com/assets/images/services/machine-learning.jpg"
         },
         {
-          title: "IOT, AR & VR",
+          title: "IoT & VR",
           link: "Get Started",
           image: "https://www.xzect.com/assets/images/services/ar-vr.jpg"
         },
@@ -74,6 +79,12 @@ const ServicesCard = () => {
           image: "https://www.xzect.com/assets/images/services/research-and-dev.jpg"
         }
       ];
+
+      const handleCardClick = (serviceName) => {
+        const encodedServiceName = encodeURIComponent(serviceName);
+        router.push(`/service/${encodedServiceName}`);
+    };
+
       
 
   return (
@@ -83,8 +94,10 @@ const ServicesCard = () => {
       <div className={styles.subheading}>Take Your Business to the Next Level with Our Industry-Leading Services</div>
 
       <div className={styles.services}>
+
       {services.map((service, index) => (
-        <Card key={index} title={service.title} link={service.link} image={service.image} />
+        
+        <Card key={index} title={service.title} link={service.link} image={service.image}  onClick={() => handleCardClick(service.name)}  />
       ))}
       </div>
      
