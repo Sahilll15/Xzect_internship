@@ -47,6 +47,18 @@
   cursor: pointer;
   text-decoration: none;
 }
+.btn:hover{
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 0.8;
+}
 
 @media (max-width: 768px) {
   .hero {

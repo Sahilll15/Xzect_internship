@@ -1,18 +1,39 @@
-import React from 'react'
+import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import styles from '../styles/Navbar.module.css'
-import Link from 'next/link'
 
 const Navbar = () => {
-  return (
-    <nav className={styles.navbar}> {/* Use the CSS class name */}
-    <ul>
-      <li>
-        <Link href="/">Xzent</Link>
-      </li>
-    
-    </ul>
-  </nav>
-  )
-}
+  const [isOpen, setIsOpen] = useState(false);
 
-export default Navbar
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <nav className={styles.navbar}>
+      <div className="logo">Logo</div>
+      <div className={`${styles.navbaritems} ${isOpen ? 'open' : ''}`}>
+       {
+        isOpen &&(
+          <div c>
+     
+          <a className={styles.link} href="#">Popular</a>
+          <a className={styles.link} href="#">Services</a>
+          <a className={styles.link} href="#">Industries</a>
+          <a className={styles.link} href="#">Resources</a>
+
+          </div>
+        )
+       }
+          
+        
+      </div>
+      <div className="dropdown-icon" onClick={handleToggle}>
+        <FontAwesomeIcon icon={faBars} />
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
