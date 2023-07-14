@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-      <div className={styles.logo}>Xzent</div>
+      <div className={styles.logo}>Xzect</div>
       <div className={`${styles.navbaritems} ${isOpen ? 'open' : ''}`}>
        {
         isOpen &&(
